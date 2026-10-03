@@ -1,34 +1,40 @@
-// PLACEHOLDER: fotos de stock de Unsplash, solo de relleno visual.
-// Reemplazar "src" por las fotos reales de Rubén (y "alt"/"categoria"
-// según corresponda) cuando las tenga listas.
-const fotos = [
-  { src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=900&q=80", alt: "Retrato en blanco y negro", categoria: "Retrato" },
-  { src: "https://images.unsplash.com/photo-1519741497674-611481863552?w=900&q=80", alt: "Retrato urbano", categoria: "Retrato" },
-  { src: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=900&q=80", alt: "Fotografía de evento", categoria: "Eventos" },
-  { src: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=900&q=80", alt: "Paisaje urbano", categoria: "Editorial" },
-  { src: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=900&q=80", alt: "Retrato de estudio", categoria: "Retrato" },
-  { src: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=900&q=80", alt: "Fotografía de boda", categoria: "Eventos" },
-  { src: "https://images.unsplash.com/photo-1554151228-14d9def656e4?w=900&q=80", alt: "Fotografía editorial", categoria: "Editorial" },
-  { src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=900&q=80", alt: "Retrato en exteriores", categoria: "Retrato" },
-];
-
-// Llena #galeria-grid con una <figure> por cada foto del arreglo de
-// arriba. Cada figure guarda el índice en data-indice para que el click
-// sepa cuál foto abrir en el lightbox (ver más abajo).
+// La galería ahora sale de trabajos.json (vía leerTrabajos(), en
+// data.js), no de un arreglo escrito a mano. trabajosActuales guarda el
+// último arreglo traído, para que el click del lightbox (más abajo)
+// sepa qué trabajo le corresponde a cada <figure> sin tener que leerlo
+// de nuevo.
 const galeriaGrid = document.getElementById("galeria-grid");
+let trabajosActuales = [];
 
-fotos.forEach((foto, indice) => {
-  const figura = document.createElement("figure");
-  figura.dataset.indice = indice;
+// Llena #galeria-grid con una <figure> por cada trabajo. Cada figure
+// guarda el índice en data-indice para que el click sepa cuál trabajo
+// abrir en el lightbox (ver más abajo).
+function renderizarGaleria(trabajos) {
+  trabajosActuales = trabajos;
+  galeriaGrid.innerHTML = "";
 
-  const imagen = document.createElement("img");
-  imagen.src = foto.src;
-  imagen.alt = foto.alt;
-  imagen.loading = "lazy";
+  trabajos.forEach((trabajo, indice) => {
+    const figura = document.createElement("figure");
+    figura.dataset.indice = indice;
 
-  figura.appendChild(imagen);
-  galeriaGrid.appendChild(figura);
-});
+    const imagen = document.createElement("img");
+    imagen.src = trabajo.imagen;
+    imagen.alt = trabajo.titulo;
+    imagen.loading = "lazy";
+
+    figura.appendChild(imagen);
+    galeriaGrid.appendChild(figura);
+  });
+}
+
+// leerTrabajos() es async (usa fetch()), así que esta función también lo
+// es: "await" espera a que la Promise se resuelva antes de seguir.
+async function iniciarGaleria() {
+  const trabajos = await leerTrabajos();
+  renderizarGaleria(trabajos);
+}
+
+iniciarGaleria();
 
 // --- Lightbox: click en una foto de la galería la abre en grande ---
 const lightbox = document.getElementById("lightbox");
@@ -40,9 +46,9 @@ galeriaGrid.addEventListener("click", (e) => {
   const figura = e.target.closest("figure");
   if (!figura) return;
 
-  const foto = fotos[Number(figura.dataset.indice)];
-  lightboxImagen.src = foto.src;
-  lightboxImagen.alt = foto.alt;
+  const trabajo = trabajosActuales[Number(figura.dataset.indice)];
+  lightboxImagen.src = trabajo.imagen;
+  lightboxImagen.alt = trabajo.titulo;
   lightbox.hidden = false;
 });
 

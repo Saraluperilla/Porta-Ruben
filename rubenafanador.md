@@ -6,20 +6,25 @@ datos reales de Rubén todavía — el sitio se armó con texto y fotos de ejemp
 
 ## Qué trae el sitio ya armado
 
-- **Inicio**: foto grande de portada + nombre + una frase corta de estilo ("tagline").
-- **Galería**: grilla de fotos (actualmente fotos de stock de Unsplash, solo de relleno visual),
-  con lightbox — al hacer click, la foto se ve en grande.
-- **Sobre mí**: retrato + un párrafo de biografía.
+- **Inicio**: foto grande de portada (uno de los trabajos reales) + nombre + una frase corta de
+  estilo ("tagline", todavía placeholder).
+- **Galería**: 6 trabajos reales de Rubén (`trabajos.json` + carpeta `images/`), con lightbox — al
+  hacer click, la foto se ve en grande. Los títulos/categorías/descripciones de cada uno son un
+  texto sugerido (ver más abajo), no los datos reales.
+- **Sobre mí**: retrato + un párrafo de biografía (el retrato todavía es una foto de stock, no una
+  foto real de Rubén — sería raro usar una de sus fotos de trabajo como si fuera su propia cara).
 - **Servicios**: 3 tarjetas (Retratos, Eventos, Editorial) — nombres también de ejemplo.
 - **Contacto**: datos de contacto + un formulario (sin backend: por ahora solo muestra un mensaje
   de confirmación en la pantalla, no envía el mensaje a ningún lado).
+- **Gestión** (`gestion.html`): panel para administrar los trabajos (Crear/Consultar/Actualizar/
+  Eliminar), igual que el de `proyectos1`, pero sin login.
 
 ## Lo que falta reemplazar (contenido real de Rubén)
 
-- [ ] **Fotos de la galería**: cambiar las URLs de Unsplash en `script.js` (arreglo `fotos`) por
-      las fotos reales de su trabajo. Cada foto necesita: `src` (la imagen), `alt` (descripción
-      corta) y `categoria` (para agrupar/filtrar si más adelante se agrega esa función).
-- [ ] **Foto de portada** (`index.html`, sección `#inicio`) y **retrato** (sección `#sobre-mi`).
+- [ ] **Título, categoría y descripción de cada trabajo** (`trabajos.json`, o desde `gestion.html`):
+      les puse un texto descriptivo de lo que se ve en la foto, no los datos reales de cada toma
+      (cliente, publicación, fecha, etc.).
+- [ ] **Retrato de "Sobre mí"** (`index.html`, sección `#sobre-mi`): sigue siendo una foto de stock.
 - [ ] **Tagline**: una frase corta que describa su estilo de fotografía (ej. "Retrato y vida
       urbana", "Fotografía documental en blanco y negro"...).
 - [ ] **Biografía** (sección `#sobre-mi`): quién es, hace cuánto fotografía, qué lo inspira,

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "titulo": "Retrato en estudio I",
+    "imagen": "images/trabajo-1.png",
+    "categoria": "Retrato",
+    "descripcion": "Retrato en blanco y negro, fondo neutro."
+  },
+  {
+    "id": 2,
+    "titulo": "Retrato en estudio II",
+    "imagen": "images/trabajo-2.png",
+    "categoria": "Retrato",
+    "descripcion": "Retrato en blanco y negro, pose cercana."
+  },
+  {
+    "id": 3,
+    "titulo": "Retrato a color",
+    "imagen": "images/trabajo-3.png",
+    "categoria": "Editorial",
+    "descripcion": "Retrato editorial a color, con flor."
+  },
+  {
+    "id": 4,
+    "titulo": "Retrato de perfil",
+    "imagen": "images/trabajo-4.png",
+    "categoria": "Editorial",
+    "descripcion": "Retrato de perfil en blanco y negro, maquillaje dramático."
+  },
+  {
+    "id": 5,
+    "titulo": "Vestuario escénico",
+    "imagen": "images/trabajo-5.png",
+    "categoria": "Editorial",
+    "descripcion": "Retrato con vestuario y maquillaje escénico."
+  },
+  {
+    "id": 6,
+    "titulo": "Retrato con sombrero",
+    "imagen": "images/trabajo-6.png",
+    "categoria": "Retrato",
+    "descripcion": "Retrato con sombrero y prenda tradicional."
+  }
+]

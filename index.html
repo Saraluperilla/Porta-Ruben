@@ -24,8 +24,8 @@
   </header>
 
   <section id="inicio" class="hero">
-    <!-- PLACEHOLDER: foto de portada. Cambiar por una foto propia de Rubén -->
-    <img class="hero-imagen" src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=1600&q=80" alt="Fotografía de portada del portafolio">
+    <!-- Uno de los trabajos reales (trabajos.json) como foto de portada -->
+    <img class="hero-imagen" src="images/trabajo-5.png" alt="Retrato con vestuario escénico, foto de portada">
     <div class="hero-contenido">
       <h1>Rubén Afanador</h1>
       <!-- PLACEHOLDER: frase corta de estilo -->
@@ -36,8 +36,8 @@
 
   <section id="galeria" class="galeria">
     <h2 class="titulo-seccion">Galería</h2>
-    <p class="subtitulo-seccion">Fotos de muestra — reemplazar en el arreglo "fotos" de script.js</p>
-    <!-- script.js llena esto con una <figure> por cada foto del arreglo "fotos" -->
+    <!-- script.js llena esto con una <figure> por cada trabajo de trabajos.json
+         (vía leerTrabajos() en data.js) -->
     <div class="galeria-grid" id="galeria-grid"></div>
   </section>
 
@@ -94,5 +94,7 @@
   </footer>
 
 </body>
+<!-- data.js primero: script.js necesita leerTrabajos() -->
+<script src="data.js"></script>
 <script src="script.js"></script>
 </html>
