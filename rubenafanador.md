@@ -21,9 +21,10 @@ confirmar.
 - **Servicios**: Retrato / Moda editorial / Proyectos personales — nombres ajustados a lo que
   realmente se sabe que hace (moda y retrato editorial, no eventos tipo bodas). Las descripciones de
   cada tarjeta siguen siendo placeholder.
-- **Contacto**: formulario sin backend (solo confirma en pantalla, no envía nada a ningún lado) y
-  datos de contacto todavía placeholder — no encontré un email/teléfono profesional público y
-  confiable para poner algo real ahí.
+- **Contacto**: sitio oficial (ruvenafanador.com) e Instagram (@ruvenafanador, cuenta verificada)
+  reales, más el formulario sin backend (solo confirma en pantalla, no envía nada a ningún lado).
+  No puse email ni teléfono: no encontré ninguno público y confiable, y no se inventa un dato de
+  contacto de una persona real.
 - **Gestión** (`gestion.html`): panel para administrar los trabajos (Crear/Consultar/Actualizar/
   Eliminar), mismo patrón que `proyectos1`, sin login.
 
@@ -32,8 +33,7 @@ confirmar.
 - [ ] **Datos de cada trabajo** (`trabajos.json` o desde `gestion.html`): título, categoría y
       descripción real de cada foto (cuál cliente/publicación, de qué año, etc.).
 - [ ] **Descripción de cada servicio** (`#servicios`): un párrafo corto por tarjeta.
-- [ ] **Datos de contacto reales** (`#contacto`): email, teléfono y/o agencia de representación.
-- [ ] **Redes sociales** (pie de página): Instagram u otras, si quiere mostrarlas.
+- [ ] **Email o teléfono directo** (`#contacto`), si quiere mostrar uno en vez de solo web/Instagram.
 
 ## Fuentes de la biografía
 
@@ -41,6 +41,8 @@ confirmar.
 - [Ruvén Afanador, el prestigioso fotógrafo colombiano afincado en Nueva York — ArteSacro](https://www.artesacro.org/Noticia/Ver/33361/ruven-afanador-prestigioso-fotografo-colombiano-afincado-nueva-york-autor)
 - [Ruvén Afanador: el fotógrafo colombiano más cotizado tras la cámara — Milartienda](https://milartienda.com/ruven-afanador/)
 - [Ruvén Afanador — All About Photo](https://www.all-about-photo.com/photographers/photographer/1404/ruven-afanador)
+- [Sitio oficial](https://ruvenafanador.com)
+- [Instagram @ruvenafanador](https://www.instagram.com/ruvenafanador/) (cuenta verificada, bio: "Photographer in pursuit of beauty")
 
 ## Repositorio
 

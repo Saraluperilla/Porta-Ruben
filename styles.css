@@ -269,6 +269,11 @@ a {
   margin-top: 10px;
 }
 
+.contacto-datos a:hover {
+  color: var(--acento);
+  text-decoration: underline;
+}
+
 .form-contacto {
   margin-top: 32px;
   display: flex;
