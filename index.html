@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rubén Afanador — Fotógrafo</title>
+  <meta name="description" content="Portafolio de fotografía de Rubén Afanador.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="nav">
+    <a href="#inicio" class="nav-logo">Rubén Afanador</a>
+    <!-- script.js alterna la clase "abierto" en #nav-links (menú de celular) -->
+    <button id="btn-menu" class="nav-toggle" aria-label="Abrir menú">☰</button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#galeria">Galería</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <!-- PLACEHOLDER: foto de portada. Cambiar por una foto propia de Rubén -->
+    <img class="hero-imagen" src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=1600&q=80" alt="Fotografía de portada del portafolio">
+    <div class="hero-contenido">
+      <h1>Rubén Afanador</h1>
+      <!-- PLACEHOLDER: frase corta de estilo -->
+      <p class="hero-tagline">[PLACEHOLDER: una frase corta que describa tu estilo de fotografía]</p>
+      <a href="#galeria" class="btn-primario">Ver galería</a>
+    </div>
+  </section>
+
+  <section id="galeria" class="galeria">
+    <h2 class="titulo-seccion">Galería</h2>
+    <p class="subtitulo-seccion">Fotos de muestra — reemplazar en el arreglo "fotos" de script.js</p>
+    <!-- script.js llena esto con una <figure> por cada foto del arreglo "fotos" -->
+    <div class="galeria-grid" id="galeria-grid"></div>
+  </section>
+
+  <section id="sobre-mi" class="sobre-mi">
+    <!-- PLACEHOLDER: retrato de Rubén -->
+    <img class="sobre-mi-foto" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="Retrato de Rubén Afanador">
+    <div class="sobre-mi-texto">
+      <h2 class="titulo-seccion">Sobre mí</h2>
+      <p>[PLACEHOLDER: biografía corta — quién es, hace cuánto fotografía, qué lo inspira, formación o experiencia relevante.]</p>
+    </div>
+  </section>
+
+  <section id="servicios" class="servicios">
+    <h2 class="titulo-seccion">Servicios</h2>
+    <div class="servicios-grid">
+      <article class="servicio">
+        <h3>Retratos</h3>
+        <p>[PLACEHOLDER: descripción corta del servicio.]</p>
+      </article>
+      <article class="servicio">
+        <h3>Eventos</h3>
+        <p>[PLACEHOLDER: descripción corta del servicio.]</p>
+      </article>
+      <article class="servicio">
+        <h3>Editorial</h3>
+        <p>[PLACEHOLDER: descripción corta del servicio.]</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <h2 class="titulo-seccion">Contacto</h2>
+    <p class="contacto-datos">[PLACEHOLDER: email] · [PLACEHOLDER: teléfono] · [PLACEHOLDER: Instagram]</p>
+
+    <!-- Sin backend: script.js solo muestra #contacto-mensaje, no envía nada a ningún servidor -->
+    <form id="form-contacto" class="form-contacto">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu email" required>
+      <textarea name="mensaje" placeholder="Cuéntame sobre tu proyecto" rows="4" required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+    <p id="contacto-mensaje" class="contacto-mensaje" hidden></p>
+  </section>
+
+  <!-- Lightbox: arranca oculto, script.js lo llena y le quita "hidden"
+       al hacer click en una foto de la galería -->
+  <div id="lightbox" class="lightbox" hidden>
+    <button id="btn-cerrar-lightbox" class="lightbox-cerrar" aria-label="Cerrar">✕</button>
+    <img id="lightbox-imagen" class="lightbox-imagen" src="" alt="">
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2026 Rubén Afanador. [PLACEHOLDER: redes sociales]</p>
+  </footer>
+
+</body>
+<script src="script.js"></script>
+</html>
